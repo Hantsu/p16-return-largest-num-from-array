@@ -1,0 +1,38 @@
+/*
+p16-functionWithReturnValue.cpp
+Author: max Taylor
+Date:   3/5/18
+*/
+
+#include <iostream>
+#include <random>
+using namespace std;
+
+int main(){
+    int largest = 0;
+    int other1 = 0;
+    int other2 = 0;
+    
+   //int location = 0;
+   int num[3];    //for array
+   
+   
+    for(int i = 0; i < 3; i++) {      //input of 3 nums
+    cin >> num[i];
+   }
+    
+
+    
+    largest = num[0];   // give largest value
+    other1 = num[0];
+    other2 = num[0];
+   for(int i = 1;i < 3; i++) {
+    if(largest < num[i]){
+        largest = num[i];    //largest val set to largest num
+        other1 = num[i];    //other values set to this one.. not sure if needed but it works and i dont want to remove it
+        other2 = num[i];}
+    } 
+
+   cout<<"The maximum value of "<< num[0] <<", " << num[1] << " and " << num[2] << " is " << largest << ".";
+   return 0;
+}
